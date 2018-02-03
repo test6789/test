@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <title>ゴミ箱の箱</title>
+    </head>
+    <body>
+            <h1>ゴミ箱の箱</h1>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./music.html">曲</a></li>
+                <li><a href="./button.html">実験</a></li>
+                <li><a href="./program.html">プログラム</a></li>
+            </ul>
+            <button id="button1">テスト1</button>
+
+            <script>
+                var button = document.getElementById('button1');
+                var audio = new Audio();
+                audio.src = "./se/fq_simple.wav";
+
+                button.addEventListener('click', function(){
+                    audio.pause();
+                    audio.currentTime=0;
+                    audio.play();
+                })
+            </script>
+    </body>
+</html>
